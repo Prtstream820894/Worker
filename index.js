@@ -1,4 +1,5 @@
 import { handleXYZ } from './XYZ.js';
+import { handleicc } from './icc.js';
 
 export default {
   async fetch(request, env, ctx) {
@@ -8,7 +9,10 @@ export default {
     if (url.pathname === "/XYZ") {
       return handleXYZ();
     }
-
+// Jab koi /XYZ kholega toh XYZ.js chalegi
+    if (url.pathname === "/icc") {
+      return handleicc();
+    }
     // Normal link kholne par yeh dikhega
     return new Response("Yeh main index.js hai!");
   }

@@ -9,11 +9,13 @@ export default {
     if (url.pathname === "/XYZ") {
       return handleXYZ();
     }
-// Jab koi /XYZ kholega toh XYZ.js chalegi
+
+    // Jab koi /icc kholega toh icc.js chalegi
     if (url.pathname === "/icc") {
       return handleicc();
     }
-    // Normal link kholne par yeh dikhega
+
+    // Normal link kholne par yeh dikheगा
     return new Response("Yeh main index.js hai!");
   }
 };

@@ -9,6 +9,6 @@ export async function handleCookie() {
   }
   
   return new Response(`🍪 Firebase Stored Cookie:\n${cookie}`, {
-    headers: { "Content-Type": "text/plain" }
+    headers: { "Content-Type": "text/plain; charset=utf-8" }
   });
 }

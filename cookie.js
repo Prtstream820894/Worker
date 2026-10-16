@@ -5,8 +5,10 @@ export async function handleCookie() {
     const data = await res.json();
     cookie = data.hdntl || "";
   } catch(e) {
-    cookie = "";
+    cookie = "Not Found";
   }
   
-  return new Response(`Cookie: ${cookie}`);
+  return new Response(`🍪 Firebase Stored Cookie:\n${cookie}`, {
+    headers: { "Content-Type": "text/plain" }
+  });
 }
